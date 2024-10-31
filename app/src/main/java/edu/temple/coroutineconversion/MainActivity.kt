@@ -10,6 +10,7 @@ import android.widget.TextView
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.util.Locale
@@ -41,9 +42,10 @@ class MainActivity : AppCompatActivity() {
                             String.format(Locale.getDefault(), "Current opacity: %d", it)
                     }
                     cakeImageView.alpha = it / 100f
-                    Thread.sleep(40)
+                    delay(40)
                 }
             }
         }
+
     }
 }
